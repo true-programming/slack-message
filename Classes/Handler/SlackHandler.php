@@ -19,7 +19,7 @@ use TYPO3\CMS\Core\Core\Environment;
 
 class SlackHandler
 {
-    public function __invoke(string $customSlackChannel = null, Level $handlerLevel = Level::Critical): ?Logger
+    public function __invoke(?string $customSlackChannel = null, Level $handlerLevel = Level::Critical): ?Logger
     {
         $url = getenv('SLACK_WEBHOOK_URL');
 
